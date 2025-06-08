@@ -138,6 +138,7 @@
             this.isLoading = true;
             createDoctorManager({
               name: option.scopeRow.ID,
+              type: 2,
               password: SHA256('123456')
             }).then(res => {
               if (res.code === 200) {
