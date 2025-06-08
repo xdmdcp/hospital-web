@@ -185,7 +185,7 @@
           appointmentId: this.appointId,
           cardId: this.cardId,
           content: this.medicalRecord,
-          doctorId: getCookie('username')
+          doctorId: sessionStorage.getItem('accountID')
         }).then(res => {
           if (res.code === 200) {
             this.isLoading = false;

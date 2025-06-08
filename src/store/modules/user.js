@@ -51,6 +51,7 @@ const user = {
         getUserInfo().then(response => {
           const data = response.data;
           sessionStorage.setItem('accountID', data.accountId);
+          sessionStorage.setItem('username', data.username);
           if (data.name && data.name.length > 0) { // 验证返回的roles是否是一个非空数组
             commit('SET_NAME', data.name)
           } else {

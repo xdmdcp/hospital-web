@@ -85,6 +85,7 @@
         this.$confirm('确认退出吗？','提示',{
 
         }).then(() => {
+          sessionStorage.removeItem('accountID')
           sessionStorage.removeItem('user')
           this.$router.push('/')
         })

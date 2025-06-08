@@ -204,7 +204,7 @@
           this.statusData = [];
           this.tableAllData.tableData = [];
           let date = dateFormYMD(this.appointDate);
-          getPatientList(getCookie('username'), date, this.selectTimeID,
+          getPatientList(sessionStorage.getItem('accountID'), date, this.selectTimeID,
             this.pageList.pageNum, this.pageList.pageSize).then(res => {
               if (res.code === 200) {
                 let data = res.data.list
